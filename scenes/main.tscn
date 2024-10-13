@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://o1uxio877asj"]
+
+[ext_resource type="PackedScene" uid="uid://ca2l5m0agn001" path="res://scenes/bullet_tower.tscn" id="1_r8gbc"]
+[ext_resource type="PackedScene" uid="uid://tsh6y7df2ix4" path="res://scenes/bullet.tscn" id="2_ykjem"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Buller_tower" parent="." instance=ExtResource("1_r8gbc")]
+
+[node name="Bullet" parent="." instance=ExtResource("2_ykjem")]

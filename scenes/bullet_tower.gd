@@ -48,3 +48,10 @@ func shoot():
 	bullet.linear_velocity = direction * bullet.speed  # Устанавливаем скорость пули
 	
 	get_parent().add_child(bullet)
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	print(body)
+	if body.is_in_group("enemies"):  # Проверяем, является ли объект врагом
+		print('DEAD')
+		get_tree().paused = true

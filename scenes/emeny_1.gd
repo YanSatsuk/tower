@@ -1,12 +1,13 @@
 extends StaticBody2D
 
-var speed = 40  # Скорость движения врага
+var speed = 75  # Скорость движения врага
 var amplitude = 2  # Амплитуда синусоиды
 var frequency = 5.0  # Частота синусоиды
 var target_position = Vector2.ZERO  # Целевая позиция
 var time_passed = 0.0  # Время для синусоидального движения
 
 func _ready():
+	add_to_group("enemies")
 	# Устанавливаем начальную позицию врага
 	if position.x < get_viewport().size.x / 2:
 		# Если враг на левой стороне экрана

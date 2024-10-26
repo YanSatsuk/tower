@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cm8tq3lt6nnoo"
-path="res://.godot/imported/enemy1.svg-a591c5526345ca2f6f6c1adab8e9753e.ctex"
+uid="uid://b58xgov6mn7fy"
+path="res://.godot/imported/bullet_tower.svg-b209a77ee44cd8ee908d2b6e408b4ae5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemy1.svg"
-dest_files=["res://.godot/imported/enemy1.svg-a591c5526345ca2f6f6c1adab8e9753e.ctex"]
+source_file="res://assets/tower/bullet_tower.svg"
+dest_files=["res://.godot/imported/bullet_tower.svg-b209a77ee44cd8ee908d2b6e408b4ae5.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var enemy_scene = preload("res://scenes/emeny_1.tscn")  # Замените на путь к вашей сцене врага
+@onready var enemy_scene = preload("res://scenes/enemies/emeny_1.tscn")  # Замените на путь к вашей сцене врага
 var spawn_timer: Timer
 
 func _ready():

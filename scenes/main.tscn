@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://o1uxio877asj"]
+[gd_scene load_steps=6 format=3 uid="uid://o1uxio877asj"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_dedxm"]
-[ext_resource type="PackedScene" uid="uid://ca2l5m0agn001" path="res://scenes/bullet_tower.tscn" id="1_r8gbc"]
-[ext_resource type="PackedScene" uid="uid://tsh6y7df2ix4" path="res://scenes/bullet.tscn" id="2_ykjem"]
-[ext_resource type="PackedScene" uid="uid://dw0b05h7oxho7" path="res://scenes/emeny_1.tscn" id="3_qxj10"]
+[ext_resource type="PackedScene" uid="uid://ca2l5m0agn001" path="res://scenes/tower/bullet_tower.tscn" id="1_r8gbc"]
+[ext_resource type="PackedScene" uid="uid://tsh6y7df2ix4" path="res://scenes/tower/bullets/bullet.tscn" id="2_ykjem"]
+[ext_resource type="PackedScene" uid="uid://dw0b05h7oxho7" path="res://scenes/enemies/emeny_1.tscn" id="3_qxj10"]
+[ext_resource type="PackedScene" uid="uid://cfs3qrckvmvt7" path="res://scenes/UI/ui.tscn" id="5_8o5e2"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_dedxm")
@@ -15,3 +16,5 @@ visible = false
 
 [node name="Emeny1" parent="." instance=ExtResource("3_qxj10")]
 position = Vector2(-25, 67)
+
+[node name="UI" parent="." instance=ExtResource("5_8o5e2")]

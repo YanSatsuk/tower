@@ -36,4 +36,4 @@ func _process(delta):
 	# Проверяем, достиг ли враг центра экрана
 	if position.distance_to(target_position) < 10:
 		pass
-		#queue_free()  # Удаляем врага, если он достиг центра
+		queue_free()  # Удаляем врага, если он достиг центра

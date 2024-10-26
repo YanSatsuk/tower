@@ -3,7 +3,6 @@ extends RigidBody2D
 var speed = 800  # Скорость пули
 
 func _ready():
-	# Устанавливаем скорость пули
 	pass
 
 func _process(delta):

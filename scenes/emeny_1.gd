@@ -17,7 +17,7 @@ func _ready():
 		position.x = get_viewport().size.x
 
 	# Устанавливаем целевую позицию в центр экрана
-	target_position = Vector2(get_viewport().size.x / 2, get_viewport().size.y / 2)
+	target_position = Vector2(get_viewport().size.x / 2 - 20, get_viewport().size.y / 2 - 25)
 
 func _process(delta):
 	# Обновляем время
@@ -35,5 +35,5 @@ func _process(delta):
 
 	# Проверяем, достиг ли враг центра экрана
 	if position.distance_to(target_position) < 10:
-		# Если враг достиг центра, можно изменить логику (например, остановить движение или изменить направление)
-		queue_free()  # Удаляем врага, если он достиг центра
+		pass
+		#queue_free()  # Удаляем врага, если он достиг центра

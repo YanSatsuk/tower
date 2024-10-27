@@ -18,3 +18,4 @@ visible = false
 position = Vector2(-25, 67)
 
 [node name="UI" parent="." instance=ExtResource("5_8o5e2")]
+unique_name_in_owner = true

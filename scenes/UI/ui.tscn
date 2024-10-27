@@ -1,5 +1,13 @@
-[gd_scene format=3 uid="uid://cfs3qrckvmvt7"]
+[gd_scene load_steps=2 format=3 uid="uid://cfs3qrckvmvt7"]
 
-[node name="UI" type="Container"]
-offset_right = 40.0
-offset_bottom = 40.0
+[ext_resource type="Script" path="res://scenes/UI/ui.gd" id="1_ri8u8"]
+
+[node name="UI" type="Panel"]
+process_mode = 3
+script = ExtResource("1_ri8u8")
+
+[node name="Bullet_count" type="Label" parent="."]
+unique_name_in_owner = true
+offset_right = 80.0
+offset_bottom = 23.0
+text = "Bullets: 100"

@@ -2,13 +2,15 @@ extends Node2D
 
 @onready var tower = %BulletTowerSprite2D
 @onready var bullet_scene = preload("res://scenes/tower/bullets/bullet.tscn")
+@onready var UI = %UI
 var shoot_delay = 0.05  # Задержка между выстрелами
 var time_since_last_shot = 0.0
 var bullet_count = 0;
 @export var bullet_limit = 100;
+var counter
 
 func _ready():
-	add_to_group("tower")
+	counter = UI.get_node("%Bullet_count")
 	# Получаем размеры окна
 	var screen_size = get_viewport().get_size()
 	
@@ -31,16 +33,15 @@ func _process(delta):
 	
 	time_since_last_shot += delta  # Увеличиваем время с последнего выстрела
 
-	if Input.is_action_pressed("fire"):
-		if time_since_last_shot >= shoot_delay:  # Проверяем, прошло ли достаточно времени
-			shoot()
-			time_since_last_shot = 0.0  # Сбрасываем таймер
+	if Input.is_action_pressed("fire") and time_since_last_shot >= shoot_delay:
+		shoot()
+		time_since_last_shot = 0.0  # Сбрасываем таймер
 
 func _input(event):
 	pass
 
 func shoot():
-	if bullet_count == bullet_limit:
+	if bullet_count >= bullet_limit:
 		return
 		
 	var bullet = bullet_scene.instantiate()
@@ -55,6 +56,7 @@ func shoot():
 	
 	get_parent().add_child(bullet)
 	bullet_count += 1
+	counter.text = "Bullets: " + str(bullet_limit - bullet_count)
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemies"):
